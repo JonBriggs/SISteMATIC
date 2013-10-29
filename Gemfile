@@ -44,8 +44,12 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'devise'
+gem 'devise'  #combines with omniauth for authentication
+gem 'cancan'  #for actual permissions
+gem 'omniauth' #for later SAML support etc. might be omni-auth
+gem 'role_model'  #for role based permissions
 gem 'rspec'
+
 gem 'rspec-rails'
 gem 'httparty'
 gem 'prawn'
