@@ -11,7 +11,7 @@ end
 gem 'httparty' #for making RESTful calls out to other systems
 gem 'prawn' #for building PDFs
 gem 'devise' #for permissions
-gem 'bootstrap-sass' #for better looking web pages
+gem 'bootstrap-sass' #for better looking web pages check out getbootstrap.com
 
 Getting Started
 Go into mysql
@@ -27,3 +27,9 @@ GRANT ALL PRIVILEGES ON SISteMATIC_development.* TO 'sistem'@'localhost';
 Clone the github repo
 cd into the directory and run
 rake db:setup
+
+=========================================
+Rails Resources
+railscasts.com
+guides.rubyonrails.org
+codeschool.com
