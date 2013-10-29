@@ -1,0 +1,7 @@
+<div class='jumbotron'><h2>Hello from index</h2></div>
+<ul>
+<% @individuals.each do |ind|%>
+   <li><%= ind.firstname %> <%=ind.lastname%> <%=ind.gradyear%><%= link_to "[Edit]", edit_individual_path(ind) %></li>
+<% end %>
+</ul>
+<%= link_to "[NEW]", new_individual_path%>
