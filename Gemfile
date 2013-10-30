@@ -45,7 +45,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'  #combines with omniauth for authentication
-gem 'cancan'  #for actual permissions
+#gem 'cancan'  #an option for authorization, we are going to try it from scratch, see authorization from scratch 1&2 on railscasts
 gem 'omniauth' #for later SAML support etc. might be omni-auth
 gem 'role_model'  #for role based permissions
 gem 'rspec'
