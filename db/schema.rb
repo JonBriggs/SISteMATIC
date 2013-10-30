@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131029185416) do
+ActiveRecord::Schema.define(version: 20131030072020) do
 
   create_table "courses", force: true do |t|
     t.string   "name"
@@ -54,6 +54,25 @@ ActiveRecord::Schema.define(version: 20131029185416) do
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "sections", force: true do |t|
+    t.integer  "course_id"
+    t.integer  "term_id"
+    t.integer  "year_id"
+    t.string   "section"
+    t.integer  "period_id"
+    t.integer  "location_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.integer  "individual_id"
+    t.integer  "group_id"
+    t.string   "parentab"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -66,18 +85,7 @@ ActiveRecord::Schema.define(version: 20131029185416) do
     t.string   "last_sign_in_ip"
   end
 
-  add_index "individuals", ["email"], name: "index_individuals_on_email", unique: true, using: :btree
-  add_index "individuals", ["reset_password_token"], name: "index_individuals_on_reset_password_token", unique: true, using: :btree
-
-  create_table "sections", force: true do |t|
-    t.integer  "course_id"
-    t.integer  "term_id"
-    t.integer  "year_id"
-    t.string   "section"
-    t.integer  "period_id"
-    t.integer  "location_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
