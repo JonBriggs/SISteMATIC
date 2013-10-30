@@ -5,5 +5,5 @@ class Individual < ActiveRecord::Base
   def fullname
     "#{lastname}, #{firstname}"
   end
-
+  
 end
