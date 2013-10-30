@@ -27,6 +27,7 @@ GRANT ALL PRIVILEGES ON SISteMATIC_development.* TO 'sistem'@'localhost';
 Clone the github repo
 cd into the directory and run
 rake db:setup
+##If a first install run 'bundle install'
 
 =========================================
 Rails Resources
