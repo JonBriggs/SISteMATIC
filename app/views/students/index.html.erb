@@ -1,7 +1,7 @@
 <div class='jumbotron'><h2>Hello from index</h2></div>
 <ul>
 <% @students.each do |ind|%>
-   <li><%= ind.firstname %> <%=ind.lastname%> <%=ind.gradyear%><%= link_to "[Edit]", edit_student_path(ind) %></li>
+   <li><%= ind.firstname %> <%=ind.lastname%> <%=ind.gradyear%><%= link_to "[Edit]", edit_student_path(ind) %><%= link_to "[Delete]", ind, method: :delete %></li>
 <% end %>
 </ul>
 <%= link_to "[NEW]", new_student_path%>
